@@ -35,4 +35,5 @@ background_images = tc.SArray(data=my_custom_background_images)
 model = tc.one_shot_object_detector.create(starter_images, 'label',
                                            backgrounds=background_images)
 
+model.save('probe_id.model')
 
