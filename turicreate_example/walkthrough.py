@@ -21,6 +21,7 @@ test_images['annotated_predictions'] = \
 
 # To visualize the predictions made on the test set
 test_images.explore()
+test_images.save('test_data.csv', format='csv')
 
 # Save the model for later use in TuriCreate
 model.save('stop-sign.model')
