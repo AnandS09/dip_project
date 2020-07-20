@@ -14,10 +14,12 @@ num_img_vid = [192, 213, 169, 152]
 prefix = './images/medical_images/converted_mp4/extracted_frames/'
 
 for i in range(len(vid_name)):
+#for i in range(1):
     num_img = num_img_vid[i]
     vid = vid_name[i]
 
-    for n in range(num_img):
+    #for n in range(num_img):
+    for n in range(3):
         filename = prefix + vid + '/'
         filename += 'img'
         filename += str(format(n+1, '04d'))
@@ -32,8 +34,10 @@ for i in range(len(vid_name)):
 #background_images = tc.SFrame({'image':my_custom_background_images})
 background_images = tc.SArray(data=my_custom_background_images)
 
-model = tc.one_shot_object_detector.create(starter_images, 'label',
-                                           backgrounds=background_images)
+#background_images.explore()
 
-model.save('probe_id.model')
+#model = tc.one_shot_object_detector.create(starter_images, 'label',
+#                                           backgrounds=background_images)
+
+#model.save('probe_id.model')
 
