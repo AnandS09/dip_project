@@ -15,7 +15,7 @@ for i in range(len(vid_name)):
     num_img = num_img_vid[i]
     vid = vid_name[i]
 
-    for n in range(3):
+    for n in range(num_img):
         filename = prefix + vid + '/'
         filename += 'img'
         filename += str(format(n+1, '04d'))
