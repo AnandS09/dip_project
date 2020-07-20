@@ -28,7 +28,8 @@ for i in range(len(vid_name)):
 background_images = tc.SArray(data=my_custom_background_images)
 
 model = tc.one_shot_object_detector.create(starter_images, 'label',
-                                           backgrounds=background_images)
+                                           backgrounds=background_images,
+                                           max_iterations=1000)
 
 model.save('probe_id_custom_bk.model')
 
